@@ -1,4 +1,4 @@
-package com.exampleit.usuratonkachi.populatorservicespring;
+package it.usuratonkachi.populatorservicespring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -8,8 +8,8 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.exampleit.usuratonkachi.populatorservicespring</groupId>
-	<artifactId>populator-service-spring</artifactId>
+	<groupId>it.usuratonkachi</groupId>
+	<artifactId>populatorservicespring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>populator-service-spring</name>
 	<description>Populator for Techitalia</description>

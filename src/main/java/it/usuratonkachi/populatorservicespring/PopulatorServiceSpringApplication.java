@@ -1,4 +1,4 @@
-package com.exampleit.usuratonkachi.populatorservicespring;
+package it.usuratonkachi.populatorservicespring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
