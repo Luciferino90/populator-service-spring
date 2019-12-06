@@ -50,16 +50,16 @@ public class MockRandomDocument {
         LocalDateTime uploaddate = between();
 
         return (Doc) new Doc()
-                .id(UUID.randomUUID().toString())
-                .username(username)
-                .doctypeid(randType)
-                .doctypename(docType.get(randType))
-                .mimetype(mimetypes.get(randMime))
-                .size(ThreadLocalRandom.current().nextLong(100) + 1)
-                .status(randStatus == 0 ? 0 : 1)
-                .uploaddate(uploaddate)
-                .archiveddate(randStatus == 0 ? null : between(uploaddate))
-                .filename(UUID.randomUUID().toString() + "." + mimetypes.get(randMime).split("/")[1]);
+                .setId(UUID.randomUUID().toString())
+                .setUsername(username)
+                .setDoctypeid(randType)
+                .setDoctypename(docType.get(randType))
+                .setMimetype(mimetypes.get(randMime))
+                .setSize(ThreadLocalRandom.current().nextLong(100) + 1)
+                .setStatus(randStatus == 0 ? 0 : 1)
+                .setUploaddate(uploaddate)
+                .setArchiveddate(randStatus == 0 ? null : between(uploaddate))
+                .setFilename(UUID.randomUUID().toString() + "." + mimetypes.get(randMime).split("/")[1]);
     }
 
     public static InternalDoc generateInternalDoc(String username){
@@ -69,16 +69,16 @@ public class MockRandomDocument {
         LocalDateTime uploaddate = between();
 
         return (InternalDoc) new InternalDoc()
-                .id(UUID.randomUUID().toString())
-                .username(username)
-                .doctypeid(randType)
-                .doctypename(docType.get(randType))
-                .mimetype(mimetypes.get(randMime))
-                .size(ThreadLocalRandom.current().nextLong(100) + 1)
-                .status(randStatus == 0 ? 0 : 1)
-                .uploaddate(uploaddate)
-                .archiveddate(randStatus == 0 ? null : between(uploaddate))
-                .filename(UUID.randomUUID().toString() + "." + mimetypes.get(randMime).split("/")[1]);
+                .setId(UUID.randomUUID().toString())
+                .setUsername(username)
+                .setDoctypeid(randType)
+                .setDoctypename(docType.get(randType))
+                .setMimetype(mimetypes.get(randMime))
+                .setSize(ThreadLocalRandom.current().nextLong(100) + 1)
+                .setStatus(randStatus == 0 ? 0 : 1)
+                .setUploaddate(uploaddate)
+                .setArchiveddate(randStatus == 0 ? null : between(uploaddate))
+                .setFilename(UUID.randomUUID().toString() + "." + mimetypes.get(randMime).split("/")[1]);
     }
 
     public static LocalDateTime between(LocalDateTime uplodDate) {
