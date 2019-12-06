@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: populator-service-spring
+
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+
+  webflux:
+    date-format: "yyyy-MM-dd'T'HH:mm:ss.SSSX"
+
+  jackson:
+    date-format: "yyyy-MM-dd'T'HH:mm:ss.SSSX"
+    serialization:
+      write-dates-as-timestamps: false
+      WRITE_DATES_AS_TIMESTAMPS: false
+      indent-output: true
+    locale: it_IT
+    time-zone: GMT+1
+
+  data:
+    mongodb:
+      uri: mongodb://tech:italia@mongodb.techitalia:27017/techitalia
+      repositories:
+        type: reactive
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: text/html,text/css,application/json
+    min-response-size: 2048
+
+management:
+  server:
+    port: 8081
+  endpoints:
+    web:
+      enabled: true
+      expose: info,health
+  endpoint:
+    health:
+      enabled: true
+      exposure.include: info,health
+      cors.allowed-origins: "*"
+
