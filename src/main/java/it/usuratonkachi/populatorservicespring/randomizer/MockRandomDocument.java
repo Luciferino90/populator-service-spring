@@ -48,6 +48,7 @@ public class MockRandomDocument {
         int randMime = random.nextInt(mimetypes.size());
         String randType = docType.keySet().stream().skip(random.nextInt(docType.size())).findFirst().orElse("123e4567-e89b-12d3-a456-426655440000");
         LocalDateTime uploaddate = between();
+        LocalDateTime createddate = between(uploaddate);
 
         return (Doc) new Doc()
                 .setId(UUID.randomUUID().toString())
@@ -58,7 +59,8 @@ public class MockRandomDocument {
                 .setSize(ThreadLocalRandom.current().nextLong(100) + 1)
                 .setStatus(randStatus == 0 ? 0 : 1)
                 .setUploaddate(uploaddate)
-                .setArchiveddate(randStatus == 0 ? null : between(uploaddate))
+                .setCreateddate(createddate)
+                .setArchiveddate(randStatus == 0 ? null : between(createddate))
                 .setFilename(UUID.randomUUID().toString() + "." + mimetypes.get(randMime).split("/")[1]);
     }
 
